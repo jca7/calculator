@@ -1,0 +1,76 @@
+.container {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  min-height: 100vh;
+}
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  color: #7CB9E8;
+}
+
+
+
+.calculatorBox {
+  border: 7px solid #164863;
+  width: 400px; 
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  border-radius: 5%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+  background-color: #04364A;
+}
+
+#rectangle-screen {
+  width: 80%;
+  height: 20%; 
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px; 
+  background-color: #9BBEC8;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 10px; /* Adjust the value for the desired corner roundness */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+  border: 2px solid black;
+
+}
+
+#rectangle-screen > h1 {
+  margin-bottom: 0px;
+  margin-top: 60px;
+  margin-right: 10px;
+
+}
+
+.flexButton {
+  border: 2px solid black; 
+  width: 40px; 
+  height: 30px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  padding: 1rem; 
+  font-family: 'Roboto', sans-serif;
+  border-radius: 10%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+  background-color: #9BBEC8;
+}
+
+.buttonRow {
+  display: flex; 
+  gap: 6px; 
+}
+
+body {
+  background-color: #427D9D;
+}
+
+
