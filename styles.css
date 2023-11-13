@@ -73,4 +73,9 @@ body {
   background-color: #427D9D;
 }
 
+.pressed {
+  box-shadow: 0 3px 4px 0 #030404;
+  opacity: 0.5;
+}
+
 
