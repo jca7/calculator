@@ -53,7 +53,3 @@ const displayNumbers = document.getElementById("numbers");
 
 // Set the text content of the <p> element
 displayNumbers.textContent = "";
-
-function test() {
-  return a + b
-}
