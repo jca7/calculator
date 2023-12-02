@@ -52,4 +52,8 @@ function buttonAnimation(button) {
 const displayNumbers = document.getElementById("numbers");
 
 // Set the text content of the <p> element
-displayNumbers.textContent = "333245";
+displayNumbers.textContent = "";
+
+function test() {
+  return a + b
+}
