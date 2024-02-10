@@ -32,7 +32,7 @@ function operate(operator, a, b) {
 
 
 for(i = 0; i < document.querySelectorAll(".flexButton").length; i++) {
-  document.querySelectorAll(".flexButton")[i].addEventListener("click", function () { // this function gets called after listening for click. 
+  document.querySelectorAll(".flexButton")[i].addEventListener("click", function () { // this gets called after listening for click. 
     var buttonInnerHTML = this.textContent; 
     console.log(buttonInnerHTML)
     buttonAnimation(this);
