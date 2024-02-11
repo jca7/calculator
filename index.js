@@ -31,15 +31,17 @@ function operate(operator, a, b) {
 
 
 
-for(i = 0; i < document.querySelectorAll(".flexButton").length; i++) {
-  document.querySelectorAll(".flexButton")[i].addEventListener("click", function () { // this gets called after listening for click. 
-    var buttonInnerHTML = this.textContent; 
-    console.log(buttonInnerHTML)
-    buttonAnimation(this);
-    
-  })
-} 
+const displayNumbers = document.getElementById("numbers");
+let currentNumber = '';
 
+for (let i = 0; i < document.querySelectorAll(".flexButton").length; i++) {
+  document.querySelectorAll(".flexButton")[i].addEventListener("click", function () {
+    const buttonInnerHTML = this.textContent;
+    currentNumber += buttonInnerHTML; // Append the clicked number to the current number
+    displayNumbers.textContent = currentNumber; // Update the displayed number
+    buttonAnimation(this);
+  });
+}
 
 function buttonAnimation(button) {
   button.classList.add("pressed");
@@ -49,7 +51,6 @@ function buttonAnimation(button) {
 }
 
 
-const displayNumbers = document.getElementById("numbers");
 
-// Set the text content of the <p> element
-displayNumbers.textContent = "";
+
+
