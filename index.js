@@ -1,44 +1,35 @@
-function add (a, b) {
-  return a + b
-}
-
+const add = ((a, b) => a + b)
 const subtract = ((a, b) => a - b)
-
 const multiply = ((a, b) => a * b)
-
 const divide = ((a, b) => a / b)
 
-const firstNumber = 'a'
+let operator;
+let secondNumber;
 
-const secondNumber = 'b' 
-
-const operator  = + 
-
-function operate(operator, a, b) {
-  if (operator === '+') {
-    add(a, b)
+function operate(operator, firstNumber, secondNumber) {
+  switch (operator) {
+    case '+':
+      return add(firstNumber, secondNumber);
+    case '-':
+      return subtract(firstNumber, secondNumber);
+    case '*':
+      return multiply(firstNumber, secondNumber);
+    case '/':
+      return divide(firstNumber, secondNumber);
+    default:
+      return "Invalid operator";
   }
-  else if (operator === '-' ) {
-    subtract(a, b)
-  }
-  else if (operator === '*') {
-    multiply(a, b)
-  }
-  else if (operator === '/') {
-    divide(a, b)
-  }
-} 
-
-
+}
 
 const displayNumbers = document.getElementById("numbers");
-let currentNumber = '';
+let firstNumber = '';
 
 for (let i = 0; i < document.querySelectorAll(".flexButton").length; i++) {
   document.querySelectorAll(".flexButton")[i].addEventListener("click", function () {
-    const buttonInnerHTML = this.textContent;
-    currentNumber += buttonInnerHTML; // Append the clicked number to the current number
-    displayNumbers.textContent = currentNumber; // Update the displayed number
+    const buttonInnerHTML = this.textContent; // grabs the number that user clicked
+    firstNumber += buttonInnerHTML; // Append the clicked number to the current number
+    displayNumbers.textContent = firstNumber; // Update the displayed number
+    console.log(firstNumber)
     buttonAnimation(this);
   });
 }
@@ -50,7 +41,23 @@ function buttonAnimation(button) {
   }, 150);
 }
 
+//clear button 
+const clearButton = document.getElementById("clear")
+clearButton.addEventListener('click', clearCurrentNumber); 
+function clearCurrentNumber() {
+  firstNumber = '';
+  displayNumbers.textContent = '';
+}
+
+
+const addButton = document.getElementById("add");
+addButton.addEventListener('click', function() {
+  operator = "+"; 
+  // For example, you can call the operate function passing the operator and numbers
+});
 
 
 
-
+const divideButton = document.getElementById("divide");
+const multiplyButton = document.getElementById("multiply");
+const subtractButton = document.getElementById("subtract");
